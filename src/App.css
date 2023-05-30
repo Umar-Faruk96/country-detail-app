@@ -1,38 +1,116 @@
-.App {
+:root {
+  --container-padding: 0.5rem 0.5rem;
+  --container-border: 2px solid #32d121;
+  --container-border-radius: 0.5rem;
+  --container-margin: 1rem 1rem;
+  --container-text: 0.8rem;
+  --detail-page-h2: 1.2rem;
+  --container-bg-color: #012c0f;
+  --grid-gap: 0.5rem;
+  --btn-padding: 0.4rem 1rem;
+  --btn-radius: 0.2rem;
+  --btn-bg-color: #32d121;
+  --text-color: #eee;
+  --link-color: #a4f171;
+}
+
+
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: var(--grid-gap);
+  margin: var(--container-margin);
+}
+
+main.country-container {
+  margin: var(--container-margin);
+  padding: var(--container-margin);
+}
+
+main h2,
+h4,
+h6 {
+  margin: 0;
+}
+
+.country-container {
+  padding: var(--container-padding);
+  border: var(--container-border);
+  border-radius: var(--container-border-radius);
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: var(--grid-gap);
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
 }
 
-.App-link {
-  color: #61dafb;
+.country-container h5,
+p {
+  margin: 0;
+  font-size: var(--container-text);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.country-container a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.country-container button {
+  border: none;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  background-color: var(--btn-bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+span {
+  color: var(--link-color);
+  display: inline-block;
+  padding: 4px;
+}
+
+.country-container span {
+  padding: 4px 8px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 8px;
+}
+
+.name-detail,
+.region-detail,
+.official-detail,
+.info,
+.coat-of-arms,
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: var(--grid-gap);
+}
+
+.name-detail,
+.region-detail,
+.official-detail {
+  width: 70%;
+}
+
+.name-detail h2 {
+  font-size: var(--detail-page-h2);
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  border-right: 1px solid var(--text-color);
+  padding-right: var(--grid-gap);
 }
